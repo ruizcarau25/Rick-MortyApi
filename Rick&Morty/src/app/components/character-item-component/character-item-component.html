@@ -1,0 +1,9 @@
+<section class="card h-100">
+    <img [src]="character().image" class="card-img-top" [alt]="'Imagen de ' + character().name">
+    <div class="card-body">
+        <h4 class="card-title">{{ character().name }}</h4>
+        <p class="card-text">{{ character().species }} - {{ character().status }}</p>
+        <!-- STEP7: evento clic sobre el botón que lanza el output hacia el componente padre -->
+        <button type="button" class="btn btn-primary" (click)="emitCharacterClicked()">View detail</button>
+    </div>
+</section>

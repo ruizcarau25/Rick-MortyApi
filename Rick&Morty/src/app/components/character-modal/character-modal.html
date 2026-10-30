@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{ character?.name }}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <img [src]="character?.image" class="img-fluid rounded mb-3" [alt]="'Imagen de ' + character?.name">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Status:</strong> {{ character?.status }}</li>
+        <li class="list-group-item"><strong>Species:</strong> {{ character?.species }}</li>
+        <li class="list-group-item"><strong>Gender:</strong> {{ character?.gender }}</li>
+        <li class="list-group-item"><strong>Origin:</strong> {{ character?.origin?.name }}</li>
+        <li class="list-group-item"><strong>Location:</strong> {{ character?.location?.name }}</li>
+        <li class="list-group-item"><strong>Episodes:</strong> {{ character?.episode?.length }}</li>
+    </ul>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close()">Close</button>
+</div>

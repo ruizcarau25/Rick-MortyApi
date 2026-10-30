@@ -1,0 +1,16 @@
+<div class="container py-4">
+    <h1 class="mb-4">Rick &amp; Morty</h1>
+
+    <div class="row g-4">
+        @for (char of characterList(); track char.id) {
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <!-- STEP9: el padre dibuja el componente hijo y declara:
+             1) [character]="char": el personaje que se le pasa por input
+             2) (characterClicked)="openCharacterModal($event)": gestiona el evento del output;
+                $event contiene el ID emitido por el hijo -->
+            <app-character-item-component [character]="char"
+                (characterClicked)="openCharacterModal($event)"></app-character-item-component>
+        </div>
+        }
+    </div>
+</div>
